@@ -1,6 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
+if not exist "models" mkdir models
 start "" /b "bin\llama-server.exe" ^
   -m "models\gemma-4-E2B_q4_0-it.gguf" ^
   --host 127.0.0.1 --port 8080 ^
